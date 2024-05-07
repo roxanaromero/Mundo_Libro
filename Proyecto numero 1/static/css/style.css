@@ -1,0 +1,86 @@
+    /*Hoja de estilo*/
+    *{
+        margin: 0; /*margin establece el margen para los cuatro lados*/
+        padding: 0; /*padding establece el espacio de relleno*/
+        /*background-color: beige; /*cambia el color de relleno*/
+        /*font-family: Verdana; /*cambia el tipo de letra*/
+        box-sizing: border-box;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #logo {
+        font-weight: bold;
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    /* h1{
+        color: rgb(0, 0, 0);
+        padding: 1vw 43vw ;
+        
+    } */
+
+    /* selector por id */
+    #banner {
+        background-image: url("../img/banner-libreria.jpg");
+        background-size: cover;
+        height: 500px;
+        background-position: center;
+        text-align: center;
+        font-size: 30px;
+
+    }
+
+    #search div {
+        /* border: 2px solid red; */
+        padding: 20px;
+        /* background-image: url(../img/banner-libreria.jpg); */
+        width: 400px;
+        margin: auto;
+        text-align: center;
+    }
+#search div input{
+    margin: auto;
+    width: 400px;
+    height: 30px;
+    border-radius: 25px;
+    border: 2px solid;
+    padding-left: 10px;
+}
+    /* #search h2 {
+        border: 2px dotted green;
+        width: 500px;
+        margin: auto;
+    } */
+
+
+
+    
+
+    header{
+        background-color: #6CB06D;
+        /* background-image: url(../img/banner-libreria.jpg); */
+        size: 60px;
+
+    }
+    
+    body{
+        background-color: #fff;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+        /* background-image: url(../img/banner-libreria.jpg); */
+    }
+
+    footer {
+        background-color: #6CB06D;
+        border: 4px double black;
+    }
+    footer a {
+        padding: 5px 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
