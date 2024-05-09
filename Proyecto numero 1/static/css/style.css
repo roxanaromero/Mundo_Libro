@@ -78,9 +78,34 @@
     footer {
         background-color: #6CB06D;
         border: 4px double black;
+        color: white;
+        padding: 20px;
     }
-    footer a {
-        padding: 5px 10px;
-        text-decoration: none;
-        font-weight: bold;
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .social-icons {
+        display: inline-block;
+
+    }
+    
+    .social-icons a {
+        display: block;
+        color: white;
+        margin-bottom: 5px;
+    }
+    
+    .social-icons img {
+        width: 20px; /* Ajusta el tamaño de las imágenes según tus preferencias */
+    }
+    
+    .footer-links {
+        display: inline-block;
+    }
+    
+    .footer-links a {
+        color: white;
+        margin-right: 20px;
     }
