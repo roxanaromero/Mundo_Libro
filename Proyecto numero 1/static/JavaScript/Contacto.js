@@ -33,21 +33,20 @@ document.getElementById('enviar').addEventListener('click', function() {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email.trim() === '') {
         errores.push("El Email no puede estar vacío.");
-    } else (!emailRegex.test(email)){
+    } 
+    
+    if (!emailRegex.test(email)){
         errores.push("Por favor, introduce un correo electrónico válido.");
     } 
         
     if (mensa.trim() === '') {
         errores.push("El Mensaje no puede estar vacío.");
     }
-
-   
-    
-
     if (errores.length > 0) {
         document.getElementById('errores').innerText = errores.join("\n");
         return;
-    } else {
+    } 
+    if(errores.length=0) {
         document.getElementById('errores').innerText = ""; // Clear error message if there are no errors
     }
 
