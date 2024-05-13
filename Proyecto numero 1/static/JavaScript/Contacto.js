@@ -11,6 +11,13 @@ const formulario = document.getElementById('formContacto');
 // Expresión regular para validar el correo electrónico
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Mensajes de error
+const ERROR_NOMBRE_VACIO = "El Nombre no puede estar vacío.";
+const ERROR_APELLIDO_VACIO = "El Apellido no puede estar vacío.";
+const ERROR_EMAIL_VACIO = "El Email no puede estar vacío.";
+const ERROR_EMAIL_INVALIDO = "Por favor, introduce un correo electrónico válido.";
+const ERROR_MENSAJE_VACIO = "El Mensaje no puede estar vacío.";
+
 // Función para validar el formulario
 function validarFormulario(event) {
     event.preventDefault();
@@ -21,24 +28,25 @@ function validarFormulario(event) {
     const area = areaInput.value.trim();
     const mensaje = mensajeInput.value.trim();
 
+
     const errores = [];
 
     if (!nombre) {
-        errores.push("El Nombre no puede estar vacío.");
+        errores.push(ERROR_NOMBRE_VACIO);
     }
 
     if (!apellido) {
-        errores.push("El Apellido no puede estar vacío.");
+        errores.push(ERROR_APELLIDO_VACIO);
     }
 
     if (!email) {
-        errores.push("El Email no puede estar vacío.");
+        errores.push(ERROR_EMAIL_VACIO);
     } else if (!emailRegex.test(email)) {
-        errores.push("Por favor, introduce un correo electrónico válido.");
+        errores.push(ERROR_EMAIL_INVALIDO);
     }
 
     if (!mensaje) {
-        errores.push("El Mensaje no puede estar vacío.");
+        errores.push(ERROR_MENSAJE_VACIO);
     }
 
     if (errores.length > 0) {
