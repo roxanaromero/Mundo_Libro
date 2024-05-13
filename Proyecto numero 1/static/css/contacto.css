@@ -48,6 +48,17 @@ button {
 button:hover {
     background-color: #88bb89;
 }
+.nav-contact{
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+}
+.texto{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+}
 
 .error-message {
     color: red;
