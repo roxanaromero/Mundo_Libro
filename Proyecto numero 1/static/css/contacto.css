@@ -1,13 +1,16 @@
 body {
-    background-color: #f0f0f0;
+    /*background-color: #f0f0f0;*/
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: url("../img/banner-libreria.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 #formulario {
-    background-color: #ddd;
+    background-color: #d9f8cf;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -24,7 +27,7 @@ table, th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #6CB06D;
 }
 
 input[type="email"],
