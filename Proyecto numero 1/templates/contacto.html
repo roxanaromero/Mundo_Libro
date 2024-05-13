@@ -1,50 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-   <link rel="stylesheet" href="./static/css/contacto.css">
-    
-</head>
-<body>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="../static/css/contacto.css">
 
-    <div class="container">
-        <h1>Contacto</h1>
-        <form id="contactForm">
-            <div class="grid-container">
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
-            </div class="grid-container">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="area">Área:</label>
-                <select id="area" name="area">
-                    <option value="administracion">Administración</option>
-                    <option value="hhrr">Recursos Humanos</option>
-                    <option value="it">Tecnologías de la Información</option>
-                    <option value="otra">Otra</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-            </div>
-        </div>
-            <div>
-                <button type="submit" id="EnviarContactobtn">Enviar</button>
-                <script src="./static/JavaScript/terminos-condiciones.js"></script>
-            </div>
-            
-        </form>
+</head>
+
+<body>
+<form Id="formContacto" novalidate action="#">
+    <div id="formulario">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="nombre" id="nombre" required>
+                </td>
+                <td><input type="text" id="apellido" required></td>
+            </tr>
+            <tr>
+                <th colspan="2">Email</th>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="email" id="email" required></td>
+            </tr>
+            <tr>
+                <th colspan="2">Área</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="area">
+                        <option value="administracion">Administración</option>
+                        <option value="hhrr">Recursos Humanos</option>
+                        <option value="it">Tecnologías de la Información</option>
+                        <option value="otra">Otra</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Mensaje:</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea type="text" id="mensaje" required></textarea>
+                </td>
+            </tr>      
+        </table>
+        <div class="error-message" id="errores"></div>
+        <button id="enviar">Enviar</button>
     </div>
+</form>
+<script src="../static/JavaScript/Contacto.js"></script>
+
 </body>
+
 </html>
