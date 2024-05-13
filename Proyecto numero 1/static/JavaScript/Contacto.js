@@ -1,69 +1,64 @@
 
-/*
-const validarFormulario= (event) => {
-    event.preventDefault()
-    const Nombre = document.getElementById("nombre")
-    const divErrorNombre = document.querySelector("#error-nombre")
-    divErrorNombre.innerHTML = ""
+// Obtener referencias a los elementos del formulario
+const nombreInput = document.getElementById('nombre');
+const apellidoInput = document.getElementById('apellido');
+const emailInput = document.getElementById('email');
+const areaInput = document.getElementById('area');
+const mensajeInput = document.getElementById('mensaje');
+const erroresDiv = document.getElementById('errores');
+const formulario = document.getElementById('formContacto');
 
-    if (Nombre.value === "") {
-        
-        divErrorNombre.insertAdjacentText("afterbegin","El nombre no puede ser vacio!!!")
-    }
+// Expresión regular para validar el correo electrónico
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    }
-*/
-document.getElementById('enviar').addEventListener('click', function() {
-    var nombre = document.getElementById('nombre').value;
-    var apellido = document.getElementById('apellido').value;
-    var email = document.getElementById('email').value;
-    var area = document.getElementById('area').value;
-    var mensa = document.getElementById('mensaje').value;
+// Función para validar el formulario
+function validarFormulario(event) {
+    event.preventDefault();
 
-    var errores = [];
+    const nombre = nombreInput.value.trim();
+    const apellido = apellidoInput.value.trim();
+    const email = emailInput.value.trim();
+    const area = areaInput.value.trim();
+    const mensaje = mensajeInput.value.trim();
 
-    if (nombre.trim() === '') {
+    const errores = [];
+
+    if (!nombre) {
         errores.push("El Nombre no puede estar vacío.");
     }
 
-    if (apellido.trim() === '') {
+    if (!apellido) {
         errores.push("El Apellido no puede estar vacío.");
     }
 
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email.trim() === '') {
+    if (!email) {
         errores.push("El Email no puede estar vacío.");
-    } 
-    
-    if (!emailRegex.test(email)){
+    } else if (!emailRegex.test(email)) {
         errores.push("Por favor, introduce un correo electrónico válido.");
-    } 
-        
-    if (mensa.trim() === '') {
+    }
+
+    if (!mensaje) {
         errores.push("El Mensaje no puede estar vacío.");
     }
+
     if (errores.length > 0) {
-        document.getElementById('errores').innerText = errores.join("\n");
-        return;
-    } 
-    if(errores.length=0) {
-        document.getElementById('errores').innerText = ""; // Clear error message if there are no errors
+        erroresDiv.innerText = errores.join("\n");
+    } else {
+        erroresDiv.innerText = "";
+
+        // Aquí puedes enviar los datos del formulario al servidor
+        const datos = {
+            nombre,
+            apellido,
+            email,
+            area,
+            mensaje
+        };
+
+        console.log(datos);
     }
+}
 
-    
-    var datos = {
-        nombre: nombre,
-        apellido: apellido,
-        email: email,
-        area: area,
-        mensa:mensa
-    };
+// Agregar evento de submit al formulario
+formulario.addEventListener('submit', validarFormulario);
 
-    console.log(datos);
-});
-
-
-/*
-const formularioRegistro = document.querySelector("#formContacto")
-formularioRegistro.addEventListener('submit',validarFormulario)
-*/
