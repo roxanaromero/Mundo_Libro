@@ -21,7 +21,9 @@ table {
     width: 100%;
 }
 
-table, th, td {
+table,
+th,
+td {
     border-collapse: collapse;
     padding: 8px;
 }
@@ -31,9 +33,14 @@ th {
 }
 
 input[type="email"],
-select, textarea {
+select,
+textarea {
     width: 100%;
     padding-right: 0px;
+}
+
+textarea {
+    height: 100px;
 }
 
 button {
@@ -48,12 +55,14 @@ button {
 button:hover {
     background-color: #88bb89;
 }
-.nav-contact{
+
+.nav-contact {
     position: absolute;
-    top: 10px; 
+    top: 10px;
     left: 10px;
 }
-.texto{
+
+.texto {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -64,4 +73,5 @@ button:hover {
     color: red;
     font-size: 14px;
     margin-top: 5px;
+    margin-bottom: 30px;
 }
